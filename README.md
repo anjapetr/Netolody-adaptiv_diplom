@@ -1,0 +1,1 @@
+# Netolody-adaptiv_diplom
