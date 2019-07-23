@@ -104,7 +104,7 @@ header, section, footer {
   transition: all 0.5s ease-in-out;
 }
 
-.header__button::hover {
+.header__button:hover {
   cursor: pointer;
   background-color: #501be9;
   transition: none;
@@ -206,7 +206,6 @@ header, section, footer {
 .athlets .purple .athlets__list__text,
 .players .purple .players__list__text {
   color: #ffffff;
-  /*padding-bottom: 5.2rem;*/
   margin-bottom: 0;
 }
 
