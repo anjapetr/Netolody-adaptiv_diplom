@@ -165,7 +165,7 @@ header, section, footer {
 .white .players__list__num,
 .grey .athlets__list__num::after {
   content: "";
-  border-bottom: 4px solid #5e42b0;
+  border: 4px solid #5e42b0;
   border-radius: 2px;
   width: 25px;
 }
@@ -703,7 +703,7 @@ header, section, footer {
  
 /*Начало блока header*/
   .page {
-    width:102%;
+    width:100%;
     max-width: 1920px;
     margin: auto;
     overflow-x: hidden;
