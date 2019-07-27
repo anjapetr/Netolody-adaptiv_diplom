@@ -1,16 +1,20 @@
 @font-face {
-  font-family: Open Sans;
-  src: url(../fonts/OpenSans-Regular.woff2) format(woff2),
-       url(../fonts/OpenSans-Regular.woff) format(woff),
-       url(../fonts/OpenSans-Regular.ttf) format(ttf);
+    font-family: OpenSans-bold;
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans:600,700,800');
 }
 
 @font-face {
-  font-family: Open Sans;
-  src: url(../fonts/OpenSans-Bold.woff2) format(woff2),
-       url(../fonts/OpenSans-Bold.woff) format(woff),
-       url(../fonts/OpenSans-Bold.ttf) format(ttf);
-  font-weight: 600;
+    font-family: OpenSans-regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -18,1030 +22,996 @@ html {
   font-size: 62.5%;
 }
 
-header, section, footer {
-  box-sizing: border-box;
-  position: relative;
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    min-width: 320px;
 }
 
-.page {
-  width: 100%;
-  margin: 0; 
-  font-family: Open Sans, Arial, sans-serif;
-  box-sizing: border-box;
-  min-width: 320px; 
+a { 
+    cursor: pointer;
 }
 
+.container {
+    box-sizing: border-box;
+}
 
+.icon {
+    fill: #fff;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+.container {
+    box-sizing: border-box;
+}
+
+.headline {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    text-align: left;
+}
+
+.be-recruited,
+.play-college-sports {
+    display: block;
+}
+
+.button {
+    background-color: #5e42b0;
+    color: #fff;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.button_text,
+.button_store {
+    display: block;
+
+}
+
+.button_store {
+    font-weight: bold;
+
+}
 
 .header {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding-top: 3.5rem;
-  padding-bottom: 8.6rem;
-  padding-right: 6.25vw;
-  padding-left: 6.25vw;
-  background-color: rgb(10, 14, 52);
-  background-image: url("../images/header_320.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  line-height: 3.7rem;
-  font-weight: bold;
+    background-color: #0a0e34;
+    position: relative;
+    z-index: 0;
 }
 
-.logo_icon_header {
-  fill: #ffffff;
-  display: block;
-  width: 13rem;
-  height: 3.5rem;
-  margin: 0 auto;
-}
-
-.title_header, .header_subtitle {
-  font-size: 2.8rem;
-}
-
-.title_header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-weight: normal;
-  font-size: 2.8rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 296px 3.1vw 221px 0.8vw;
-}
-
-
-.title_header {
-  display: flex;
-  align-self: flex-end;
-  font-weight: bold;
-  margin-left: 10vw;
-}
-
-.header__buttons {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.header__button {
-  display: flex;
-  width: 100%;
-  padding: 0.1rem 7.5rem 0.8rem 8rem;
-  font-size: 0.8rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: left;
-  background-color: #5e42b0;
-  border: none;
-  border-radius: 15px;
-  transition: all 0.5s ease-in-out;
-}
-
-.header__button:hover {
-  cursor: pointer;
-  background-color: #501be9;
-  transition: none;
-}
-
-.header__button + .header__button {
-  margin-top: 1.2rem;
-}
-
-.button__icon {
-  display: inline-block;
-  width: 2.5rem;
-  height: 2rem;
-  margin-right: 0.8rem;
-  margin-top: 0.2rem;
-  fill: #ffffff;
-}
-
-.button__store {
-  font-weight: 600;
-  display: block;
-}
-/*Конец хэдера*/
-
-
-/*Начало блоков Athlets и Players*/
-.athlets, .players {
-  padding-top: 1rem;
-}
-
-.athlets__list__item, .players__list__item {
-  padding-bottom: 5rem;
-}
-
-.athlets__title, .players__title {
-  font-weight: 700;
-  font-size: 5rem;
-  color: #e7e7e7;
-  text-transform: uppercase;
-  margin: 0;
-  padding-left: 2rem;
-}
-
-.athlets__image {
-  padding-left: 7rem;
-}
-
-.athlets__list__num, .players__list__num {
-  display: inline-block;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-  margin-left: 2rem;
-  vertical-align: text-bottom;
-}
-
-.white .athlets__list__num,
-.white .players__list__num,
-.grey .athlets__list__num::after {
-  content: "";
-  border: 4px solid #5e42b0;
-  border-radius: 2px;
-  width: 25px;
-}
-
-.grey .players__list__num::after {
-  content: "";
-  border: 4px solid #5e42b0;
-  border-radius: 2px;
-  width: 25px;
-}
-
-.purple .athlets__list__num,
-.purple .players__list__num::after {
-  content: "";
-  border: 4px solid #ffffff;
-  border-radius: 2px;
-  width: 25px;
-}
-
-.athlets__list__title, .players__list__title {
-  color: #c1c1c1;
-  font-weight: 700;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  display: inline-block;
-  margin: 0;
-  padding-top: 0.3rem;
-}
-
-.athlets__list__text, .players__list__text {
-  font-size: 1.5rem;
-  line-height: 1.9rem;
-  letter-spacing: 0.08rem;
-  text-align: left;
-  margin-bottom: 0;
-}
-
-.athlets .purple .athlets__list__text,
-.players .purple .players__list__text {
-  color: #ffffff;
-  margin-bottom: 0;
-}
-
-.athlets__list__item .white {
-  padding-top: 1.5rem;
-}
-
-.athlets__list__item .grey {
-  background-color: #f6f4fa;
-}
-
-.athlets .grey .athlets__list__text {
-  padding-bottom: 5.1rem;
-}
-
-.athlets .purple {
-  background-color: #5e42b0;
-  padding-top: 4.8rem;
-  margin-bottom: 0;
-}
-
-.athlets .purple .athlets__list__num {
-  border: 4px solid #ffffff;
-}
-
-.players__title__position {
-  padding-top: 0.5rem;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.players__image {
-  padding-left: 1rem;
-}
-
-.players__list {
-  margin-top: 4rem;
-}
-
-.players .grey {
-  background-color: #f5f6f7;
-}
-
-.players .grey .players__list__text {
-  letter-spacing: 0.07rem;
-  padding-bottom: 5.2rem;
-}
-
-.players .purple {
-  background-color: #0a0e34;
-  padding-top: 4.4rem;
-}
-
-.players .purple .players__list__num {
-  color: #684fb3;
-  border: 4px solid #ffffff;
-  border-radius: 2px;
-}
-
-.players .purple .players__list__text {
-  padding-bottom: 5.5rem;
-}
-/*Конец блоков Athlets и Players*/
-
-
-/*Начало блока Be active*/
-.be-active__list__img {
-  max-width: 100%;
-  font-size: 0;
-}
-
-.counter-block {
-  width: 7rem;
-  height: 7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #5e42b0;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.counter-block .counter {
-  border-bottom-color: #8f7bc8;
-  border-radius: 2px;
-  color: #ffffff;
-}
-
-.counter {
-  font-size: 1.5rem;
-  color: #000000;
-  border: 4px solid #5e42b0;
-  vertical-align: super;
-}
-
-.be-active__list__title {
-  margin-top: -6rem;
-  margin-bottom: 0;
-  padding-left: 2rem;
-  font-size: 2.8rem;
-  font-weight: bold;
-  color: #c1c1c1;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
-
-.be-active__list__text {
-  font-size: 1.5rem;
-  margin-bottom: 7.8rem;
-  margin-top: 0;
-  padding-left: 2rem;
-  padding-right: 2.5rem;
-  padding-top: 1.2rem;
-  letter-spacing: 0.08rem;
-  line-height: 1.9rem;
-}
-
-.be-active__list__text_position {
-  margin-bottom: 0;
-  padding-bottom: 7rem;
-}
-/*Конец блока Be active*/
-
-
-/*Начало футера*/
-  .footer {
-    background-color: rgb(10, 14, 52);
-    background-image: url(../images/footer_320.jpg);
+.header:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #0a0e34;
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center;
+}
+
+.header_logo, .footer_logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_buttons, .footer_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    position: relative;
+}
+
+.section-container {
+    box-sizing: border-box;
+}
+
+.section-main-title {
+    color: #e7e7e7;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-title {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.section-number {
+    line-height: 1.3;
+    font-weight: bold;
+    color: #000000;
+    float: left;
+    padding-right: 12px;
+}
+
+.section-number:after {
+    content: "";
+    width: 100%;
+    background-color: #5e42b0;
+    display: block;
+    margin-top: 2px;
+}
+
+.section-medium .section-number:after,
+.section-violet .section-number:after {
+    background-color: #fff;
+}
+
+.section-violet,
+.section-black {
+    color: #fff;
+}
+
+.section-black .section-number {
+    color: #9173e6;
+}
+
+.section-title .title {
+    margin-top: 0;
+    color: #c1c1c1;
+    text-transform: uppercase;
+    line-height: 1.3em;
+}
+
+.section-gray {
+    background-color: #f5f4f9;
+}
+
+.section-violet {
+    background-color: #5e42b0;
+}
+
+.section-black {
+    background-color: #0a0e34;
+}
+
+.athletes-picture {
+    display: block;
+    background-repeat: no-repeat;
+}
+
+
+.players-picture {
+    display: block;
+    background-repeat: no-repeat;
+}
+
+
+.be-active-number {
     color: #ffffff;
     text-align: center;
-    text-transform: uppercase;
-    padding: 10rem 6.25vw 0.5rem;
-  }
-
-  .footer__head {
     display: flex;
-    flex-wrap: wrap;
-  }
-
-  .footer__icon {
-    display: block;
-    box-sizing: border-box;
-    width: 7.2rem;
-    height: 7.2rem;
-    margin: 0 auto;
-    padding: 1.4rem 0.7rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     background-color: #5e42b0;
-    border-radius: 15px;
-    transition: all 0.5s ease-in-out;
-  }
+}
 
-  .footer__icon::hover {
-    background-color: #501be9;
-    transition: none;
-  }
+.be-active-number .number {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+}
 
-  .footer__icon svg {
-    width: 5.5rem;
-    height: 4.5rem;
-    stroke: #ffffff; 
-  }
+.be-active-number .number:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: #9173e6;
+    bottom: 0;
+    left: 0;
+}
 
-  .footer__title {
-    margin-top: 5rem;
-    margin-bottom: 0;
-    font-size: 3.2rem;
-    letter-spacing: 0.1rem;
-  }
+.be-active-picture {
+    max-width: 100%;
+}
 
-  .footer__subtitle {
-    margin-top: 0;
-    margin-bottom: 7rem;
-    font-size: 1.4rem;
-    color: #9b8ec1;
-    line-height: 1.3;
-    letter-spacing: 0.04rem;
-  }
-
-  .footer button {
-    width: 41%; 
-  }
-
-  .footer__logo {
+.be-active-picture .picture-src {
+    max-width: 100%;
     display: block;
-    width: 13.5rem;
-    height: 3.5rem;
-    margin: 8.5rem auto 0;
-    padding-bottom: 1rem;
-  }
+}
 
-  .footer__logo svg {
-    fill: #ffffff;
-    stroke: #ffffff;
-  }
-/*Конец футера*/
+.be-active-title {
+    text-transform: uppercase;
+    color: #e7e7e7;
+    line-height: 1.2;
+}
 
+.be-active-title .title {
+    margin-top: 0;
+}
+
+.be-active-content {
+    line-height: 1.25;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #0a0e34;
+    position: relative;
+    color: #ffffff;
+    z-index: -1;
+}
+
+.footer:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.footer_container {
+    position: relative;
+}
+
+.download-logo {
+    background: linear-gradient(to right, #50329c, #7751db);
+    display: flex;
+}
+
+.download-logo .icon {
+    margin: auto;
+}
+
+.footer_slogan {
+    text-transform: uppercase;
+}
+
+.footer_slogan .download-app {
+    font-weight: bold;
+    display: block;
+    letter-spacing: 0.04em;
+}
+
+.footer_slogan .show {
+    color: #9b8ec1;
+}
+
+.getdown {
+    margin-top: 0;
+}
+
+.getdown:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .header_logo, .footer_logo {
+        width: 136px;
+    }
+
+    .header_logo .icon, .footer_logo .icon {
+        height: 36px;
+    }
+
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .headline {
+        font-size: 2.9rem;
+        margin-bottom: 8.4rem;
+    }
+
+    .play-college-sports {
+        margin-top: 1.3rem;
+        margin-left: 4rem;
+        line-height: 1.3;
+    }
+
+    .button {
+        width: 100%;
+        padding-top: .5rem;
+        padding-bottom: .6rem;
+        justify-content: center;
+        border-radius: 1.8rem;
+        font-size: .8rem;
+    }
+
+
+    .button_google {
+        margin-top: 1.5rem;
+    }
+    
+    .button .icon {
+        height: 2.5rem;
+        margin-right: .6rem;
+    }
+
+    .header {
+        padding-top: 3.3rem;
+        padding-bottom: 8.4rem; 
+        background-image: url(https://pp.userapi.com/c850120/v850120144/caf0b/nLjF_BWkNQk.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header_logo {
+        margin-bottom: 12.6rem;
+    }
+
+    .header_buttons, .footer_buttons {
+        flex-wrap: wrap;
+        max-width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .section-main-title {
+        font-size: 5rem;
+    }
+
+    .info {
+        padding-top: 1.5rem;
+    }
+
+    .section-heading {
+        margin-bottom: -3rem;
+        overflow-x: hidden;
+    }
+
+    .section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        letter-spacing: 0.03rem;
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .section-title .title{
+        margin-bottom: 2rem;
+
+    }
+
+    .section-number {
+        font-size: 1.4rem;
+        padding-top: 5px;
+        
+    }
+
+    .section-number:after {
+        height: .4rem;
+        border-radius: .4rem;
+    }
+
+    .athletes-heading-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .athletes-heading-container .section-main-title {
+        order: -1;
+    }
+
+    .athletes-picture {
+        width: 192px;
+        height: 281px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+        margin-top: 0.6rem;
+    }
+
+    .players-heading-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .players-heading-container .section-main-title {
+        order: -1;
+    }
+
+    .players-picture {
+        width: 302px;
+        height: 248px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4.4rem;
+        margin-top: 0.5rem;
+    }
+
+    .be-active-title {
+        font-size: 2.8rem;
+    }
+
+    .be-active-title .title {
+        margin-bottom: 2.2rem;
+    }
+
+    .be-active-content {
+        font-size: 1.6rem;
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        min-height: 21.2rem;
+    }
+
+    .be-active-number {
+        width: 7rem;
+        height: 7rem;
+
+    }
+
+    .be-active-number .number {
+        font-size: 1.4rem;
+        line-height: 2.2;
+    }
+
+    .be-active-number .number:after {
+        height: 0.4rem;
+        border-radius: 0.4rem;
+    }
+
+    .be-active-number {
+        top: 0;
+        margin-top: -9rem;
+    }
+
+    .footer {
+        padding-top: 9.7rem;
+        padding-bottom: .6rem;
+    }
+
+    .footer:before{
+        background-image: url("https://pp.userapi.com/c850120/v850120786/cb72d/dDYsj5D03wU.jpg");
+    }
+
+    .download-logo {
+        width: 7.4rem;
+        height: 7.4rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 7.4rem;
+        border-radius: 2rem;
+    }
+
+    .download-logo .icon {
+        height: 4.6rem;
+    }
+
+    .footer_slogan {
+        margin-bottom: 7.3rem;
+    }
+
+    .footer_slogan .download-app {
+        font-size: 3.2rem;
+    }
+
+    .footer_slogan .show {
+        font-size: 1.4rem;
+    }
+
+    .footer_buttons {
+        margin-bottom: 8.4rem;
+    }
+}
+
+@media (min-width: 641px) {
+    .header_logo, .footer_logo {
+        width: 187px;
+    }
+
+    .header_logo .icon, .footer_logo .icon {
+        height: 51px;
+    }
+
+    .button {
+        font-size: 1.6rem;
+        padding: 1.6rem 5rem 1.6rem 3.8rem;
+        border-radius: 38px;
+        min-width: 31.4rem;
+        justify-content: center;
+    }
+
+    .button .icon {
+        height: 4.8rem;
+        margin-right: 2.4rem;
+    }
+
+    .icon.android-icon {
+        margin-left: -1.9rem;
+    }
+
+    .section-number {
+        font-size: 1.9rem;
+        padding-bottom: .6rem;
+    }
+
+    .section-number:after {
+        height: .5rem;
+        border-radius: .5rem;
+    }
+
+    .section-title .caption {
+        letter-spacing: 0.06em;
+    }
+
+    .athletes-picture {
+        position: absolute;
+    }
+
+    .players-picture {
+        position: absolute;
+    }
+
+
+    .be-active-title .title {
+        margin-bottom: 2rem;
+    }
+
+    .be-active-number {
+        font-size: 2.4rem;
+        line-height: 2.2;
+        letter-spacing: 0.05rem;
+    }
+
+    .be-active-number .number:after {
+        height: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .be-active-content {
+        position: relative;
+    }
+
+    .footer_slogan .download-app {
+        font-size: 8rem;
+    }
+
+    .download-logo {
+        width: 13rem;
+        height: 13.7rem;
+        border-radius: 2rem;
+    }
+
+    .download-logo .icon {
+        height: 8.4rem;
+    }
+}
 
 @media (min-width: 641px) and (max-width: 960px) {
+    .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 
-/*Начало хедера*/
-  .page {
-    width:100%;
-  }
+    .headline {
+        font-size: 6.4rem;
+        max-width: 60rem;
+        margin-bottom: 30rem;
+        line-height: 1.1;
+    }
 
-  .header, .footer {
-    flex-flow: wrap;
-    justify-content: space-between;
-    padding-right: 5vw;
-  }
+    .play-college-sports {
+        margin-top: 0.2rem;
+        margin-left: 10.8rem;
+    }
 
-  .header {
-    padding-bottom: 8.8rem;
-    background-image: url(../images/header_768.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    .button_google:nth-child(even)  {
+        margin-left: 3rem;
+    }
 
-  .logo_header {
-    margin-left: 22rem;
-  }
+    .button_google:nth-child(odd)  {
+        margin-left: 3rem;
+    }
 
-  .logo_icon_header {
-    width: 21rem;
-    height: 6.5rem;
-    padding-left: 1rem;
-  }
+    .header {
+        padding-top: 4rem;
+        padding-bottom: 8.9rem;
+        background-image: url("https://pp.userapi.com/c850120/v850120144/caf15/D5NRYDCPkus.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-  .title_header, .header__subtitle {
-    font-size: 6.3rem;
-  }
+    .header_logo {
+        margin-bottom: 16.5rem;
+    }
 
-  .title_header {
-    margin-top: 17.9rem;
-    margin-bottom: 2.5rem;
-    margin-left: 3.7rem;
-    letter-spacing: 0.4rem;
-  }
-    
-  .header__subtitle {
-    margin-left: 14.5rem;
-    margin-bottom: 30rem;
-    letter-spacing: 0.4rem;
-    line-height: 7.5rem;
-  }
+    .section-main-title {
+        font-size: 9rem;
+    }
 
-  .header__button {
-    width: 46%;
-    border-radius: 40px;
-    padding: 2rem 6rem 2rem 6rem;
-    font-size: 1.4rem;
-    align-items: center;
-  }
- 
-  .header__button + .header__button {
-    margin-top: 0; 
-    margin-right: 2rem;
-  }
+    .section-heading {
+        padding-top: 7rem;
+        margin-bottom: 0.5rem;
+    }
 
-  .button__apple {
-    margin-left: 1rem;
-    padding-left: 3.8rem;
-    padding-top: 1.4rem;
-  }
+    .section {
+        box-sizing: border-box;
+        padding-top: 4rem;
+        padding-bottom: 3.2rem;
+        font-size: 1.6rem;
+        line-height: 1.7;
+    }
 
-  .button__icon {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 2.6rem;
-    margin-top: 0;
-  }
-/*Конец хедера*/
+    .section-title {
+        font-size: 3.2rem;
+        padding-left: 4rem;
+    }
+    .section-title .title{
+        margin-bottom: 2rem;
 
-  
-/*Начало блоков athlets, players*/
-  .athlets, .players {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding-top: 5.8rem;
-  }
+    }
+    .section-number{
+        padding-top: 6px;
+    }
 
-  .athlets__title, .players__title {
-    padding-left: 29rem;
-    font-size: 8rem;
-  }
+    .athletes-picture {
+        width: 499px;
+        height: 700px;
+        right: 57%;
+        top: 4rem;
+    }
 
-  .athlets__image {
-    position: absolute;
-    margin-left: -23rem;
-    margin-top: 9.5rem; 
-  }
+    .athletes .section .container,
+    .athletes .section-heading .container {
+        padding-left: 38%;
+    }
 
-  .athlets__list__item {
-    padding-left: 27rem;
-  }
+    .players-picture {
+        width: 436px;
+        height: 699px;
+        right: 0;
+        top: 4rem;
+    }
 
-  .athlets__list__num, .players__list__num {
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-  }
+    .players .section .container,
+    .players .section-heading .container {
+        padding-right: 38%;
+    }
 
-  .athlets__list__title, .players__list__title {
-    padding-top: 0;
-    font-size: 3rem;
-    letter-spacing: 0.3rem; 
-  }
+    .be-active-title {
+        font-size: 8rem;
+    }
 
-  .athlets__list__text, .players__list__text {
-    margin-top: 2rem;
-    font-size: 1.7rem;
-    font-weight: 300;
-    line-height: 2.3rem;
-  }
+    .be-active-content {
+        padding-top: 7.8rem;
+        padding-bottom: 9.8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        line-height: 1.2;
+        font-size: 2.4rem;
+    }
 
-  .athlets .white {
-    padding-top: 3rem;
-  }
+    .be-active-number {
+        width: 11.6rem;
+        height: 11.6rem;
+    }
 
-  .athlets .white .athlets__list__text {
-    padding-bottom: 3.7rem;
-  }
- 
-  .athlets .grey {
-    padding-top: 3rem;
-  }
+    .be-active-number {
+        top: 0;
+        margin-top: -16rem;
+    }
 
-  .athlets .grey .athlets__list__text {
-    padding-bottom: 3.1rem;
-    line-height: 2.8rem;
-  }
+    .footer {
+        padding-top: 12.2rem;
+        padding-bottom: 2rem;
+    }
 
-  .athlets .grey .athlets__list__num {
-    margin-bottom: 0;
-  }
- 
-  .athlets .purple {
-    padding-top: 3.5rem;
-  }
+    .footer:before{
+        background-image: url("https://pp.userapi.com/c850120/v850120786/cb736/zHW6bvo6pHQ.jpg");
+    }
 
-  .athlets .purple .athlets__list__text {
-    padding-bottom: 3.7rem;
-    letter-spacing: 0.05rem;
-  }
+    .download-logo {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 7.3rem;
+    }
 
-  .players__image {
-    position: absolute;
-    margin-top: 4rem; 
-    right: 0;  
-  }
+    .footer_slogan {
+        margin-bottom: 27.8rem;
+    }
 
-  .players__title__position {
-    padding-left: 3rem;
-    margin-bottom: 0;
-  }
+    .download-logo .icon {
+        height: 8.4rem;
+    }
 
-  .players__list {
-    margin-top: 3rem;
-  }
+    .footer_slogan .hint {
+        font-size: 3.6rem;
+    }
 
-  .players__list__item {
-    padding-right: 27rem;
-    padding-left: 1rem;
-  }
+    .footer_buttons {
+        margin-bottom: 4rem;
+    }
+}
 
-  .players .white .players__list__text {
-    padding-bottom: 2.3rem;
-  }
+@media (max-width: 960px) {
+   .headline {
+        display: inline-block;
+    }
 
-  .players .grey {
-    padding-top: 3.3rem;
-  }
+    .be-active-title {
+        position: relative;
+    }
 
-  .players .grey .players__list__text {
-    padding-bottom: 3.5rem;
-    margin-top: 1.7rem;
-    line-height: 2.6rem;
-  }
-
-  .players .purple {
-    padding-top: 3.4rem;
-  }
-
-  .players .purple .players__list__text {
-    padding-bottom: 3.7rem;
-    letter-spacing: 0.1rem;
-    font-size: 1.85rem;
-    line-height: 2.4rem;
-  }
-/*Конец блоков athlets, players*/
-  
-  
-/*Начало блока be active*/
-  .active__list__title {
-    padding-left: 3.2rem;
-    margin-top: -8rem;
-    font-size: 7.8rem;
-    letter-spacing: 0;
-  }
-
-  .active__list__text {
-    margin-bottom: 10rem;
-    padding-left: 3rem;
-    font-size: 2.7rem;
-    letter-spacing: 0;
-    line-height: 2.7rem;
-  }
-
-  .counter-block {
-    width: 11.6rem;
-    height: 11.6rem;
-    margin-bottom: 2.8rem;
-  }
-
-  .counter {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-  }
-
-  .be-active__list .reverse .active__list__title,
-  .be-active__list .not-reverse .active__list__title {
-    margin-top: -9.1rem;
-  }
-
-  .be-active__list .not-reverse .active__list__text {
-    margin-bottom: 10.8rem; 
-    font-size: 2.65rem;
-    line-height: 2.8rem;
-    padding-bottom: 1.2rem;
-  }
-/*Конец блока be active*/
-
-  
-/*Начало блока footer*/
-  .footer {
-    display: flex;
-    padding: 10rem 0 0.5rem;
-    background-image: url(../images/footer_768.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .footer__icon {
-    width: 13.2rem;
-    height: 13.5rem;
-    margin-top: 2.6rem;
-    margin-left: 32rem;
-    border-radius: 30px;
-  }
-
-  .footer__icon svg {
-    width: 9.5rem;
-    height: 10.5rem;   
-  }
-
-  .footer__title {
-    margin-top: 6rem;
-    margin-left: 2.5rem;
-    font-size: 7.7rem;
-    letter-spacing: 0.7rem;
-  }
-
-  .footer__subtitle {
-    margin-bottom: 28.4rem;
-    font-size: 3.5rem;
-    line-height: 1;
-    letter-spacing: -0.03rem;
-    margin-left: 6rem;
-  }
-
-  .footer button {
-    width: 41%; 
-  }
-
-  .footer .button__apple {  
-    margin-left: 6rem;
-  }
-
-  .footer .button__google {
-    margin-right: 5.5rem;  
-  }
-
-  .footer__logo {
-    width: 21rem;
-    height: 4.5rem;
-    margin: 5.5rem auto 2rem 28rem;
-  }
-/*Конец footer*/
+    .footer_slogan {
+        text-align: center;
+    }
 }
 
 
 @media (min-width: 961px) {
- 
-/*Начало блока header*/
-  .page {
-    width:100%;
-    max-width: 1920px;
-    margin: auto;
-    overflow-x: hidden;
-  }
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1560px;
+    }
 
-  .header, .footer {
-    flex-flow: wrap;
-    justify-content: center;
-    padding-right: 5vw;
-  }
+    .headline {
+        font-size: 9rem;
+        margin-bottom: 21.5rem;
+        line-height: 1;
+    }
 
-  .header {
-    box-sizing: border-box;
-    padding: 40px 9.5vw 90px;
-    background-image: url(../images/header_desktop.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    .play-college-sports {
+        width: 100%;
+        text-align: right;
+    }
 
-  .logo_header {
-    width: 100%;
-  }
+    .button_google:nth-child(even)  {
+        margin-left: 5.5rem;
+    }
 
-  .logo_icon_header {
-    width: 20rem;
-    height: 7.5rem;
-  }
-  
-  .title_header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 9rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 290px auto 220px;
-  }
+    .button_google:nth-child(odd)  {
+        margin-left: 5.5rem;
+    }
 
-  .title_header {
-    display: block;
-    font-weight: bold;
-  }
+    .header {
+        padding-top: 4.5rem;
+        padding-bottom: 10.5rem; 
+        background-image: url("https://pp.userapi.com/c850120/v850120144/caf1f/EdAe7OMQZ-4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-  .title_header {
-    text-align: right;
-    margin-left: auto;
-    margin-right: 0;
-  }
-  
-  .header__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .header_logo {
+        margin-bottom: 29.9rem;
+    }
 
-  .header__button {
-    width: 309px;
-    padding: 2rem 6rem 2rem 6rem;
-    border-radius: 40px;
-    font-size: 1.4rem;
-  }
- 
-  .header__button + .header__button {
-    margin-top: 0; 
-    margin-left: 5rem;
-  }
+    .info {
+        overflow: hidden;
+    }
 
-  .button__apple {
-    padding-left: 3.8rem;
-    padding-top: 1.4rem;
-  }
+    .section-heading {
+        padding-top: 10rem;
+    }
 
-  .button__icon {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 2.6rem;
-    margin-top: 0;
-  }
-/*Конец блока header*/
+    .section-main-title {
+        font-size: 8.5rem;
+        margin-bottom: 2.5rem;
+    }
 
-  
-/*Начало блоков athlets, players*/
-  .athlets, .players {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    position: relative;
-    padding-top: 8rem;
-  }
+    .section {
+        padding-top: 5.1rem;
+        padding-bottom: 5.5rem;
+        font-size: 2rem;
+        box-sizing: border-box;
+        position: relative;
+    }
 
-  .athlets__title, .players__title {
-    font-size: 8rem;
-  }
+    .section-title{
+        font-size: 3.6rem;
+    }
+    .section-title .title{
+        margin-bottom: 1.45rem;
+    }
+    .section-number{
+        top: 1rem;
+        padding-top: 10px;
+    }
 
-  .athlets__title {
-    margin-right: auto;
-    margin-left: calc(50% + 0.5vw);
-  }
+    .section-container {
+        position: relative;
+        z-index: 1;
+    }
 
-  .athlets__image {
-    position: absolute;
-    margin-top: -7rem;
-  }
+    .athletes-heading-container {
+        position: relative;
+    }
 
-  .athlets__list__item {
-    padding-left: calc(50% + 2vw);
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
-  
-  .players__list__item {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
+    .athletes-picture {
+        width: 566px;
+        height: 908px;
+        top: -7rem;
+        z-index: 1;
+    }
 
-  .athlets__list__num, .players__list__num {
-    font-size: 2rem;
-    margin-left: 0;
-    margin-right: 1rem; 
-  }
+    .players-heading-container {
+        position: relative;
+    }
 
-  .athlets__list__title, .players__list__title {
-    font-size: 3.5rem;
-    letter-spacing: 0.3rem; 
-    margin-left: 0;
-    margin-right: auto; 
-  }
+    .players-picture {
+        width: 991px;
+        height: 815px;
+        top: -7.5rem;
+        z-index: 1;
+    }
 
-  .athlets__list__text, .players__list__text {
-    max-width: 47rem;
-    margin-left: 0;
-    margin-right: auto;
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 2.5rem;
-  }
+    .be-active-number {
+        width: 16.8rem;
+        height: 15.5rem;
+    }
 
-  .athlets__list__text {
-    padding-right: 16rem;
-  }
+    .be-active {
+        display: flex;
+    }
 
-  .athlets .white {
-    padding-top: 7.5rem;
-  }
- 
-  .athlets .grey {
-    background-color: #f6f4fa;
-  }
+    .be-active-picture {
+        width: 50%;
+    }
 
-  .athlets .grey .athlets__list__num {
-    margin-bottom: 0;
-  }
+    .be-active-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10rem;
+        padding-right: 12rem;
+    }
 
-  .players__image {
-    position: absolute;
-    margin-top: 2.5rem;
-    right: calc(50% - 829px);
-  }
+    .be-active-number {
+        left: -7.5rem;
+        margin-top: -2.5rem;
+    }
 
-  .players__title__position {
-    padding-left: 9.6vw;
-  }
+    .be-active-number .number {
+        margin-top: -2.2rem;
+    }
 
-  .players__list {
-    margin-top: 7.8rem;
-  }
+    .be-actives {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .be-active:nth-child(2n) .be-active-content{
+        padding-left: 10rem;
+        padding-right: 12rem;
+    }
+    .be-active:nth-child(2n) .be-active-picture {
+        order: 1;
+    }
 
-  .players__list__item {
-    padding-right: 50vw;
-    padding-left: 8.9vw;
-  }
-/*Конец блоков athlets, players*/
-  
-  
-/*Начало блока be active*/
-  .be-active__list__pic {
-    width: 50%;
-    font-size: 0;
-  }
+    .be-active:nth-child(2n) .be-active-number {
+        left: auto;
+        right: -8rem;
+    }
 
-  .be-active__list {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-  }
+    .footer {
+        padding-top: 22rem;
+        padding-bottom: 4.6rem;
+    }
 
-  .be-active__list__title {
-    position: absolute;
-    left: 49.5%;
-    top: 37%;
-    padding-left: 6.36vw;
-    font-size: 4.05vw;
-    letter-spacing: 0;
-  }
+    .footer:before{
+        background-image: url("https://pp.userapi.com/c850120/v850120786/cb740/hYLCWUGvN-Q.jpg");
+    }
 
-  .be-active__list__text {
-    width: 50%;
-    box-sizing: border-box;
-    margin-bottom: 0;
-    font-size: 2.7rem;
-    letter-spacing: 0;
-    line-height: 2.7rem;
-  }
+    .download-app {
+        display: flex;
+        justify-content: center;
+    }
 
-  .counter-block {
-    width: 8.75vw;
-    height: 8.07vw;
-    margin-bottom: -6.88vw;
-    margin-left: -10.68vw;
-  }
+    .download-logo{
+        margin-right: 3rem;
+    }
 
-  .counter {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-  }
+    .footer_slogan{
+        margin-bottom: 15.3rem;
+    }
 
-  .not-reverse .be-active__list__text {
-    padding: 22.4vw 8.4vw 0 6vw;  
-    font-size: 2.65rem;
-    line-height: 2.6rem; 
-  }
+    .footer_slogan .download-app {
+        line-height: 1.1;
+        margin-top: .6rem;
+    }
 
-  .not-reverse .be-active__list__title {
-    top: 66%;
-    margin-top: -14.11vw;
-    padding-left: 6.87vw;
-  }
+    .footer_slogan .show {
+        font-size: 3rem;
+    }
 
-  .not-reverse .counter-block {
-    margin-left: -11.2vw
-  }
-  
-  .reverse {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-  }
+    .footer_buttons {
+        margin-bottom: 24.8rem;
+    }
+}
 
-  .reverse .be-active__list__title {
-    display: flex;
-    flex-direction: row-reverse;
-    left: 0%;
-    margin-top: -1.72vw;
-    margin-left: 3vw;
-  }
+@media (min-width: 961px) and (max-width: 1920px) {
+    .athletes-picture {
+        right: 50%;
+    }
 
-  .reverse .be-active__list__text {
-    padding: 22.4vw 6.4vw 0 9.5vw;
-  }
+    .athletes .section-container {
+        padding-left: 50%;
+    }
 
-  .reverse .counter-block {
-    width: 8.75vw;
-    height: 8.07vw;
-    margin-left: 6vw;
-  }
-/*Конец блока be active*/
+    .players-picture {
+        left: 45%;
+    }
 
-  
-/*Начало футера*/
-  .footer {
-    display: flex;
-    box-sizing: border-box;
-    padding: 250px 9.5vw 50px;
-    background-image: url(../images/footer_desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .footer__head {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .footer__head__icon {
-    display: flex;
-    align-items: center;
-    float: left;
-    box-sizing: border-box;
-    margin-left: 2.37rem; 
-  }
+    .players .section-container {
+        padding-left: 10%;
+        padding-right: 51%;
+    }
 
-  .footer__icon {
-    width: 13.2rem;
-    height: 13.5rem;
-    border-radius: 30px;
-  }
+    .be-active-title {
+        font-size: 4rem
+    }
 
-  .footer__icon svg {
-    width: 9.5rem;
-    height: 10.5rem;   
-  }
-  
-  .footer__text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2vw;
-    text-align: left;
-  }
+    .be-active-title .title {
+        margin-bottom: 5rem
+    }
 
-  .footer__title {
-    width: 100%;
-    font-size: 7.7rem;
-    margin: 0 auto 0 0;
-  }
+    .be-active-content {
+        font-size: 1.6rem
+    }
+}
 
-  .footer__subtitle {
-    width: 100%;
-    font-size: 2.9rem;
-    line-height: 1;
-    letter-spacing: -0.03rem; 
-    margin: 0 auto 0 0;
-  }
 
-  .footer .header__buttons {
-    margin-top: 160px;
-    margin-bottom: 230px;
-  }
-  
-  .footer button {
-    width: 309.6px; 
-  }
+@media (min-width: 1921px) {
+    .athletes-picture {
+        right: 78rem;
+    }
 
-  .footer .button__apple {  
-    margin-left: -1vw;
-  }
+    .athletes .section-container {
+        padding-left: 81rem;
+    }
 
-  .footer .button__google {
-    margin-top: 0;
-    margin-left: 5rem;
-  }
+    .players-picture {
+        left: 62.5rem;
+    }
 
-  .footer__logo {
-    width: 21rem;
-    height: 4.5rem;
-    margin: 13% 28% 4%;
-  }
-/*Конец футера*/
+    .players .section-container {
+        padding-left: 13rem;
+        padding-right: 81rem;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .be-active-title {
+        font-size: 7rem;
+    }
+
+    .be-active-title .title {
+        margin-bottom: 10rem;
+    }
+
+    .be-active-content {
+        font-size: 2.4rem;
+    }
 }
